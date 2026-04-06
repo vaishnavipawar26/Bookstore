@@ -22,7 +22,7 @@ function BookDetails({ id, setSelectedBook }) {
     }
 
     await axios.post(
-      `http://localhost:5000/api/books/buy/${id}`,
+      `https://bookstore-5yhn.onrender.com/api/books/buy/${id}`,
       {},
       {
         headers: {
