@@ -9,7 +9,7 @@ function Favorites() {
       const token = localStorage.getItem('token');
 
       const res = await axios.get(
-        'http://localhost:5000/api/auth/favorites',
+        'https://bookstore-5yhn.onrender.com/api/auth/favorites',
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
