@@ -173,14 +173,14 @@ function BookList() {
   const role = localStorage.getItem('role');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/books?category=${category}`)
+    axios.get(`https://bookstore-5yhn.onrender.com/api/books?category=${category}`)
       .then(res => setBooks(res.data));
   }, [category]);
 
   const deleteBook = async (id) => {
     const token = localStorage.getItem('token');
 
-    await axios.delete(`http://localhost:5000/api/books/${id}`, {
+    await axios.delete(`https://bookstore-5yhn.onrender.com/api/books/${id}`, {
       headers: { Authorization: token }
     });
 
@@ -191,7 +191,7 @@ function BookList() {
     const token = localStorage.getItem('token');
 
     await axios.post(
-      `http://localhost:5000/api/auth/favorite/${id}`,
+      `https://bookstore-5yhn.onrender.com/api/auth/favorite/${id}`,
       {},
       { headers: { Authorization: `Bearer ${token}` } }
     );
