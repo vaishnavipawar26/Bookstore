@@ -42,7 +42,7 @@ import { Link, useNavigate } from "react-router-dom";
   }
 
   const handleLogin = async ()=>{
-    const res = await axios.post('http://localhost:5000/api/auth/login', data);
+    const res = await axios.post('https://bookstore-5yhn.onrender.com/api/auth/login', data);
 
     // save token + role
     localStorage.setItem('token', res.data.token);
