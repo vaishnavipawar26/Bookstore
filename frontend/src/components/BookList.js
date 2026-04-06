@@ -358,7 +358,7 @@ function BookList() {
               <div style={userStyles.imgWrapper}>
                 <img
                   style={userStyles.img}
-                  src={`http://localhost:5000/uploads/${b.image}`}
+                  src={`https://bookstore-5yhn.onrender.com/uploads/${b.image}`}
                   alt={b.title}
                 />
               </div>
