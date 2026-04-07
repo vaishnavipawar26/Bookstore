@@ -174,7 +174,7 @@ function BookList() {
         style={role === 'user' ? userStyles.select : adminStyles.select}
         onChange={(e) => setCategory(e.target.value)}
       >
-        <option value="All">All</option>
+        <option value="Category">All</option>
         <option value="Thriller">Thriller</option>
         <option value="Fantasy">Fantasy</option>
         <option value="Historical">Historical</option>
