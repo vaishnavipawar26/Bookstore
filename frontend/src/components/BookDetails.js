@@ -5,7 +5,7 @@ function BookDetails({ id, setSelectedBook }) {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/books/${id}`)
+    axios.get(`https://bookstore-5yhn.onrender.com/api/books/${id}`)
       .then(res => setBook(res.data));
   }, [id]);
 
@@ -99,35 +99,3 @@ export default BookDetails;
 
 
 
-
-
-
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-
-// function BookDetails({ id, setSelectedBook }) {
-//   const [book, setBook] = useState(null);
-
-//   useEffect(() => {
-//     axios.get(`http://localhost:5000/api/books/${id}`)
-//       .then(res => setBook(res.data));
-//   }, [id]);
-
-//   if (!book) return <p>Loading...</p>;
-
-//   return (
-//     <div>
-//       <h2>{book.title}</h2>
-//       <p><b>Author:</b> {book.author}</p>
-//       <p><b>Category:</b> {book.category}</p>
-//       <p><b>Description:</b> {book.description}</p>
-
-//       <button onClick={() => setSelectedBook(null)}>Back</button>
-//     </div>
-//   );
-// }
-
-// export default BookDetails;
